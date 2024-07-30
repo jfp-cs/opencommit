@@ -13,6 +13,7 @@ export function getEngine(): AiEngine {
   
   if (provider?.startsWith('ollama')) {
     const ollamaAi = new OllamaAi();
+    ollamaAi.setUrl();
     const model = provider.split('/')[1];
     if (model) ollamaAi.setModel(model);
     
