@@ -59832,6 +59832,7 @@ function getEngine() {
   const provider4 = config10?.OCO_AI_PROVIDER;
   if (provider4?.startsWith("ollama")) {
     const ollamaAi = new OllamaAi();
+    ollamaAi.setUrl();
     const model = provider4.split("/")[1];
     if (model)
       ollamaAi.setModel(model);
